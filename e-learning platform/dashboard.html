@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+        <h1>My Dashboard</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="courses.html">Courses</a>
+            <a href="dashboard.html">Dashboard</a>
+        </nav>
+    </header>
+
+    <section class="dashboard">
+        <h2>Your Course Progress</h2>
+        <div class="course-progress-list">
+            <div class="course-progress" data-course="Web Development Basics">
+                <h3>Web Development Basics</h3>
+                <span class="status">Not Started</span>
+            </div>
+
+            <div class="course-progress" data-course="Python for Beginners">
+                <h3>Python for Beginners</h3>
+                <span class="status">Not Started</span>
+            </div>
+
+            <div class="course-progress" data-course="JavaScript Essentials">
+                <h3>JavaScript Essentials</h3>
+                <span class="status">Not Started</span>
+            </div>
+
+            <div class="course-progress" data-course="ReactJS Basics">
+                <h3>ReactJS Basics</h3>
+                <span class="status">Not Started</span>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let courses = document.querySelectorAll(".course-progress");
+            courses.forEach(course => {
+                let title = course.getAttribute("data-course");
+                if (localStorage.getItem(title + "_completed") === "true") {
+                    course.classList.add("completed");
+                    course.querySelector(".status").innerText = "Completed 🎉";
+                }
+            });
+        });
+    </script>
+</body>
+</html>
