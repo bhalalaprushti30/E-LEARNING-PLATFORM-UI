@@ -1,0 +1,295 @@
+/* ===== General Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* ===== Header & Navigation ===== */
+header {
+    background: #1f1f3d;
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+    padding: 10px 15px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* ===== Hero Section ===== */
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    color: white;
+}
+
+.hero h2 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+/* ===== Buttons (Global) ===== */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #ff6f61;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover {
+    background: #ff3b30;
+}
+
+/* ===== Courses Section ===== */
+.course-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.course {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    cursor: pointer;
+}
+
+.course:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.course h3 {
+    margin-bottom: 10px;
+}
+
+.course img {
+    width: 100%;
+    border-radius: 10px;
+    max-height: 200px;
+    object-fit: cover;
+}
+
+/* ===== Course Details Page ===== */
+.course-details {
+    max-width: 800px;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.course-details h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+/* ===== Video Container (FULL SIZE) ===== */
+.video-container {
+    width: 100%;
+    max-width: 900px;
+    aspect-ratio: 16 / 9; /* Auto height for different screen sizes */
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background: black;
+}
+
+.video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+/* ===== Progress Bar ===== */
+.progress-bar-container {
+    width: 80%;
+    background: #ddd;
+    border-radius: 10px;
+    margin: 20px auto;
+    overflow: hidden;
+    height: 20px;
+    position: relative;
+}
+
+.progress-bar {
+    width: 0;
+    height: 100%;
+    background: #4caf50;
+    transition: width 0.4s ease-in-out;
+    border-radius: 10px;
+}
+
+/* ===== "Mark as Completed" Button ===== */
+.mark-completed {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 12px;
+    background: #2a9d8f;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    border: none;
+}
+
+.mark-completed:hover {
+    background: #21867a;
+}
+
+/* ===== Dashboard Styling ===== */
+.dashboard {
+    max-width: 900px;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.dashboard h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.course-progress-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.course-progress {
+    background: #ffffff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative;
+    transition: 0.3s ease-in-out;
+}
+
+.course-progress:hover {
+    transform: translateY(-5px);
+}
+
+.course-progress h3 {
+    margin-bottom: 5px;
+    font-size: 1.2rem;
+}
+
+.progress-bar-container {
+    width: 100%;
+    background: #ddd;
+    border-radius: 10px;
+    height: 10px;
+    position: relative;
+    margin: 10px 0;
+}
+
+.progress-bar {
+    height: 10px;
+    background: #4caf50;
+    width: 0;
+    border-radius: 10px;
+    transition: width 0.5s ease-in-out;
+}
+
+.status {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Highlight completed courses */
+.completed .progress-bar {
+    background: #2196F3;
+}
+
+.completed .status {
+    color: #2196F3;
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #1f1f3d;
+    color: white;
+    margin-top: 40px;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .hero h2 {
+        font-size: 2.2rem;
+    }
+
+    .course-list {
+        grid-template-columns: 1fr;
+    }
+
+    .course-details {
+        width: 90%;
+    }
+
+    .video-container {
+        max-width: 100%;
+    }
+}
